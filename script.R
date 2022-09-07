@@ -2,7 +2,7 @@ if (!requireNamespace("digest", quietly = TRUE)) {
   install.packages("digest")
 }
 
-x <- data.frame(n = 1:26, l = letters)
+x <- data.frame(n = 1:26, l = letters, stringsAsFactors = TRUE)
 
 checksum <- digest::digest(x)
 message("checksum: ", checksum)
